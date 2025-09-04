@@ -6,7 +6,7 @@ set "OUTFILE=extracted-schema-tables.txt"
 
 cd /d "%~dp0"
 
-powershell -NoProfile -ExecutionPolicy Bypass -File ".\extract-schema-table.ps1" -OutFile "%OUTFILE%"
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\extract-schema-tables-from-sql.ps1" -OutFile "%OUTFILE%"
 
 if %ERRORLEVEL% EQU 0 (
   echo -----------------------------------------
