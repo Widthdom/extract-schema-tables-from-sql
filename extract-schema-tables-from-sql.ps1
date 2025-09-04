@@ -27,5 +27,5 @@ Get-ChildItem -Path . -Filter *.sql | ForEach-Object {
 }
 
 $OutPath = Join-Path -Path (Get-Location) -ChildPath $OutFile
-$set.ToArray() | Sort-Object -Unique | Set-Content -Encoding UTF8 $OutPath
+$set | Sort-Object -Unique | Set-Content -Encoding UTF8 $OutPath
 Write-Host "Done. Wrote unique schema.table list to $OutPath"
